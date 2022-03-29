@@ -19,6 +19,8 @@ jobs:
         run: crystal tool format --check
       - name: Run build
         run: shards build --release
+      - name: Run chmod
+        run: chmod +x bin/castblock
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
